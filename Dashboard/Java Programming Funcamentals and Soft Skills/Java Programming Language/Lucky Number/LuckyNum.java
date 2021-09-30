@@ -8,7 +8,7 @@ public class LuckyNum {
         System.out.println("Enter the car no:");
         carNo = scanner.nextInt();
 
-        if (carNo < 1000 || carNo > 9999) {
+        if (carNo < 1000 || carNo > 9999 || carNo<0) {
             System.out.println(carNo + " is not a valid car number");
         } else {
             int sum = 0;
@@ -17,7 +17,7 @@ public class LuckyNum {
                 sum += Character.digit(ch, 10);
             }
 
-            System.out.println(sum);
+            //System.out.println(sum);
 
             if (sum % 3 == 0 || sum % 5 == 0 || sum % 7 == 0) {
                 System.out.println("Lucky Number");
